@@ -10,7 +10,9 @@ RUN apt-get update \
         libonig-dev \
         libzip-dev \
         unzip \
-    && docker-php-ext-install -j"$(nproc)" \
+      && docker-php-ext-install -j"$(nproc)" \
+        ctype \
+        iconv \
         intl \
         mbstring \
         opcache \
