@@ -3925,6 +3925,34 @@
             "install-path": "../staabm/side-effects-detector"
         },
         {
+            "name": "symfony/apache-pack",
+            "version": "v1.0.1",
+            "version_normalized": "1.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/apache-pack.git",
+                "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/apache-pack/zipball/3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+                "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+                "shasum": ""
+            },
+            "time": "2017-12-12T01:46:35+00:00",
+            "type": "symfony-pack",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A pack for Apache support in Symfony",
+            "support": {
+                "issues": "https://github.com/symfony/apache-pack/issues",
+                "source": "https://github.com/symfony/apache-pack/tree/master"
+            },
+            "install-path": null
+        },
+        {
             "name": "symfony/asset",
             "version": "v8.1.0",
             "version_normalized": "8.1.0.0",
@@ -10568,6 +10596,40 @@
             "install-path": "../webmozart/assert"
         }
     ],
-    "dev": false,
-    "dev-package-names": []
+    "dev": true,
+    "dev-package-names": [
+        "myclabs/deep-copy",
+        "nikic/php-parser",
+        "phar-io/manifest",
+        "phar-io/version",
+        "phpunit/php-code-coverage",
+        "phpunit/php-file-iterator",
+        "phpunit/php-invoker",
+        "phpunit/php-text-template",
+        "phpunit/php-timer",
+        "phpunit/phpunit",
+        "sebastian/cli-parser",
+        "sebastian/comparator",
+        "sebastian/complexity",
+        "sebastian/diff",
+        "sebastian/environment",
+        "sebastian/exporter",
+        "sebastian/file-filter",
+        "sebastian/git-state",
+        "sebastian/global-state",
+        "sebastian/lines-of-code",
+        "sebastian/object-enumerator",
+        "sebastian/object-reflector",
+        "sebastian/recursion-context",
+        "sebastian/type",
+        "sebastian/version",
+        "staabm/side-effects-detector",
+        "symfony/browser-kit",
+        "symfony/css-selector",
+        "symfony/debug-bundle",
+        "symfony/dom-crawler",
+        "symfony/maker-bundle",
+        "symfony/web-profiler-bundle",
+        "theseer/tokenizer"
+    ]
 }
