@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About RJ — back-end software developer building well-designed, maintainable systems.">
+    <title>About Me · RJ Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%234f46e5%22/><text x=%2250%22 y=%2268%22 font-size=%2254%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22>R</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="{{ path('Root') }}">
+                <img class="brand-logo" src="{{ asset('picture/rj.jpg') }}" alt="" width="896" height="885">
+                RJ Portfolio
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="{{ path('Root') }}">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropdown-toggle active" type="button" aria-expanded="false" aria-haspopup="true">
+                            About Me
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ path('AboutMe') }}" aria-current="page">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+                                    About Me
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path('AboutMe') }}#skills">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5.2L20 8l-4 4 1 5.8-5-2.8-5 2.8L8 12 4 8l5.6-.8z"/></svg>
+                                    Skills
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path('Contact') }}">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ path('Work') }}">Work</a></li>
+                </ul>
+                <a class="btn btn-primary nav-cta" href="{{ path('Contact') }}">Let's talk</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero about-hero">
+            <div class="container">
+                <div class="about-intro" data-reveal>
+                    <span class="hero-greeting">About me</span>
+                    <h1 class="hero-name">Hi, I'm RJ.<br>I build systems that last.</h1>
+                    <p class="hero-lead">
+                        I'm a back-end software developer at your service. I build
+                        well-designed architecture for your system not just a working
+                        system, but one that is built to be sustained and maintained.
+                    </p>
+                    <p class="hero-lead">
+                        From data models and REST APIs to containers and CI/CD pipelines,
+                        I focus on the parts that keep a product stable long after launch.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#skills">
+                            Explore my stack
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a class="btn btn-ghost" href="{{ path('Contact') }}">Let's talk</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <span class="section-kicker">My tech stack</span>
+                    <h2>Tools I know well.</h2>
+                    <p>Back-end focus, plus the surrounding tooling needed to ship and maintain dependable systems.</p>
+                </div>
+
+                <div class="stack-grid">
+                    <article class="card stack-card" data-reveal>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Languages</h3>
+                        <ul class="stack-list">
+                            <li><img class="stack-logo" src="{{ asset('logos/php.svg') }}" alt="" width="18" height="18">PHP</li>
+                            <li><img class="stack-logo" src="{{ asset('logos/openjdk.svg') }}" alt="" width="18" height="18">Java</li>
+                            <li><img class="stack-logo" src="{{ asset('logos/typescript.svg') }}" alt="" width="18" height="18">TypeScript</li>
+                        </ul>
+                    </article>
+
+                    <article class="card stack-card" data-reveal>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Frameworks</h3>
+                        <ul class="stack-list">
+                            <li><img class="stack-logo" src="{{ asset('logos/laravel.svg') }}" alt="" width="18" height="18">Laravel</li>
+                            <li><img class="stack-logo" src="{{ asset('logos/symfony.svg') }}" alt="" width="18" height="18">Symfony</li>
+                            <li><img class="stack-logo" src="{{ asset('logos/springboot.svg') }}" alt="" width="18" height="18">Spring Boot</li>
+                        </ul>
+                    </article>
+
+                    <article class="card stack-card" data-reveal>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                        </div>
+                        <h3>Data</h3>
+                        <ul class="stack-list">
+                            <li><img class="stack-logo" src="{{ asset('logos/mariadb.svg') }}" alt="" width="18" height="18">MariaDB</li>
+                            <li><img class="stack-logo" src="{{ asset('logos/phpmyadmin.svg') }}" alt="" width="18" height="18">phpMyAdmin</li>
+                        </ul>
+                    </article>
+
+                    <article class="card stack-card" data-reveal>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                        </div>
+                        <h3>Delivery &amp; security</h3>
+                        <ul class="stack-list">
+                            <li><img class="stack-logo" src="{{ asset('logos/docker.svg') }}" alt="" width="18" height="18">Docker</li>
+                            <li><img class="stack-logo" src="{{ asset('logos/cicd.svg') }}" alt="" width="18" height="18">CI/CD</li>
+                            <li><img class="stack-logo" src="{{ asset('logos/rest-api.svg') }}" alt="" width="18" height="18">REST API</li>
+                            <li><img class="stack-logo" src="{{ asset('logos/jwt.svg') }}" alt="" width="18" height="18">JWT</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <article class="ai-tools" data-reveal>
+                    <div class="ai-tools-intro">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"/><path d="M18 14l.8 1.9 2.2.8-2.2.8L18 20l-.8-2.5-2.2-.8 2.2-.8z"/></svg>
+                        </div>
+                        <div>
+                            <h3>AI-assisted coding</h3>
+                            <p>I use AI tools to speed up research, refactoring, and delivery while keeping architecture and code quality under control.</p>
+                        </div>
+                    </div>
+                    <ul class="stack-list">
+                        <li><img class="stack-logo" src="{{ asset('logos/opencode.svg') }}" alt="" width="18" height="18">OpenCode</li>
+                        <li><img class="stack-logo" src="{{ asset('logos/antigravity.svg') }}" alt="" width="18" height="18">Antigravity</li>
+                        <li><img class="stack-logo" src="{{ asset('logos/gemini.svg') }}" alt="" width="18" height="18">Gemini</li>
+                        <li><img class="stack-logo" src="{{ asset('logos/openai.svg') }}" alt="" width="18" height="18">ChatGPT</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <div class="container">
+                <div class="cta-panel" data-reveal>
+                    <div>
+                        <h2>Need a system that lasts?</h2>
+                        <p>Let's talk about the architecture behind it clear, maintainable, and ready to grow with you.</p>
+                    </div>
+                    <a class="btn btn-white btn-lg" href="{{ path('Contact') }}">
+                        Start a conversation
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> RJ Portfolio. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="{{ path('Root') }}">Home</a></li>
+                <li><a href="{{ path('Work') }}">Work</a></li>
+                <li><a href="{{ path('AboutMe') }}">About Me</a></li>
+                <li><a href="{{ path('Contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="module" src="{{ asset('js/home.js') }}"></script>
+</body>
+</html>

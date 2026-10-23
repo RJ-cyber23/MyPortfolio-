@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selected work by RJ — the Barangay Complaint Management System and a Point of Sale system.">
+    <title>Work · RJ Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%234f46e5%22/><text x=%2250%22 y=%2268%22 font-size=%2254%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22>R</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/work.css') }}">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="{{ path('Root') }}">
+                <img class="brand-logo" src="{{ asset('picture/rj.jpg') }}" alt="" width="896" height="885">
+                RJ Portfolio
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="{{ path('Root') }}">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+                            About Me
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ path('AboutMe') }}">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+                                    About Me
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path('AboutMe') }}#skills">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5.2L20 8l-4 4 1 5.8-5-2.8-5 2.8L8 12 4 8l5.6-.8z"/></svg>
+                                    Skills
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path('Contact') }}">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="{{ path('Work') }}" aria-current="page">Work</a></li>
+                </ul>
+                <a class="btn btn-primary nav-cta" href="{{ path('Contact') }}">Let's talk</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero work-hero">
+            <div class="container">
+                <div class="work-intro" data-reveal>
+                    <span class="hero-greeting">Selected work</span>
+                    <h1 class="hero-name">Work that solves<br>real problems.</h1>
+                    <p class="hero-lead">
+                        A selection of systems I've built — focused on clear workflows,
+                        dependable back ends, and interfaces people can use without a manual.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="container">
+                <article class="project">
+                    <div class="project-head" data-reveal>
+                        <div>
+                            <span class="project-kicker">Featured project · 2025</span>
+                            <h2>Barangay Complaint Management System</h2>
+                            <p>
+                                A transparent platform where residents file and track complaints
+                                online while barangay officials manage, update, and resolve them —
+                                from Pending to In Process to Resolved, in real time.
+                            </p>
+                        </div>
+                        <ul class="project-tags">
+                            <li>Web application</li>
+                            <li>Complaint management</li>
+                            <li>Role-based portals</li>
+                        </ul>
+                    </div>
+
+                    <div class="slider" data-slider role="region" aria-roledescription="carousel" aria-label="Barangay Complaint Management System screenshots" data-reveal>
+                        <div class="slider-frame">
+                            <div class="slider-bar" aria-hidden="true">
+                                <i></i><i></i><i></i>
+                                <span>BMS · Project preview</span>
+                            </div>
+                            <div class="slider-stage">
+                                <div class="slider-viewport" data-slider-track tabindex="0">
+                                    <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+                                        <img src="{{ asset('Project/BMS/1777981111014.jpeg') }}" alt="Landing page of the Barangay Complaint Management System" width="1280" height="656" loading="eager" fetchpriority="high">
+                                    </figure>
+                                    <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+                                        <img src="{{ asset('Project/BMS/1777981109871.jpeg') }}" alt="Portal selection screen for residents and employees" width="1280" height="656" loading="lazy">
+                                    </figure>
+                                    <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+                                        <img src="{{ asset('Project/BMS/1777981111270.jpeg') }}" alt="Resident portal login screen" width="1280" height="656" loading="lazy">
+                                    </figure>
+                                    <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+                                        <img src="{{ asset('Project/BMS/1777981111265.jpeg') }}" alt="Employee portal login screen" width="1280" height="656" loading="lazy">
+                                    </figure>
+                                    <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+                                        <img src="{{ asset('Project/BMS/1777981110210.jpeg') }}" alt="Resident dashboard with complaint status cards and a complaints table" width="1280" height="656" loading="lazy">
+                                    </figure>
+                                </div>
+
+                                <button class="slider-btn slider-prev" type="button" data-slider-prev aria-label="Previous screenshot">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                                </button>
+                                <button class="slider-btn slider-next" type="button" data-slider-next aria-label="Next screenshot">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="slider-footer">
+                            <div class="slider-dots">
+                                <button class="slider-dot is-active" type="button" data-slider-dot aria-label="Go to screenshot 1" aria-current="true"></button>
+                                <button class="slider-dot" type="button" data-slider-dot aria-label="Go to screenshot 2"></button>
+                                <button class="slider-dot" type="button" data-slider-dot aria-label="Go to screenshot 3"></button>
+                                <button class="slider-dot" type="button" data-slider-dot aria-label="Go to screenshot 4"></button>
+                                <button class="slider-dot" type="button" data-slider-dot aria-label="Go to screenshot 5"></button>
+                            </div>
+                            <p class="slider-count"><span data-slider-current>1</span> / <span data-slider-total>5</span></p>
+                        </div>
+                    </div>
+
+                    <ul class="checklist project-highlights" data-reveal>
+                        <li>
+                            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <div>
+                                <strong>Two focused portals</strong>
+                                Separate resident and employee experiences, each built around the tasks people actually need.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <div>
+                                <strong>Real-time status tracking</strong>
+                                Residents can see whether a complaint is Pending, In Process, or Resolved.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <div>
+                                <strong>Officials in control</strong>
+                                Barangay staff and admins manage residents, complaints, and system data from one place.
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="project">
+                    <div class="project-head" data-reveal>
+                        <div>
+                            <span class="project-kicker">Featured project · 2026</span>
+                            <h2>Point of Sale System</h2>
+                            <p>
+                                A web-based point of sale that brings products, inventory,
+                                customers, and sales reporting into one place — so day-to-day
+                                transactions stay fast and the back office stays organized.
+                            </p>
+                        </div>
+                        <ul class="project-tags">
+                            <li>Point of sale</li>
+                            <li>Inventory</li>
+                            <li>Sales dashboard</li>
+                        </ul>
+                    </div>
+
+                    <div class="slider" data-slider role="region" aria-roledescription="carousel" aria-label="Point of Sale System screenshots" data-reveal>
+                        <div class="slider-frame">
+                            <div class="slider-bar" aria-hidden="true">
+                                <i></i><i></i><i></i>
+                                <span>POS · Project preview</span>
+                            </div>
+                            <div class="slider-stage">
+                                <div class="slider-viewport" data-slider-track tabindex="0">
+                                    <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                                        <img src="{{ asset('Project/POS/pos-dashboard.png') }}" alt="POS dashboard with sales charts and system navigation" width="1366" height="768" loading="lazy">
+                                    </figure>
+                                    <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+                                        <img src="{{ asset('Project/POS/pos-products.png') }}" alt="Product management list showing categories, brands, and suppliers" width="1366" height="768" loading="lazy">
+                                    </figure>
+                                    <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+                                        <img src="{{ asset('Project/POS/pos-add-product.png') }}" alt="Add product form for creating a new inventory item" width="1366" height="768" loading="lazy">
+                                    </figure>
+                                </div>
+
+                                <button class="slider-btn slider-prev" type="button" data-slider-prev aria-label="Previous screenshot">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                                </button>
+                                <button class="slider-btn slider-next" type="button" data-slider-next aria-label="Next screenshot">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="slider-footer">
+                            <div class="slider-dots">
+                                <button class="slider-dot is-active" type="button" data-slider-dot aria-label="Go to screenshot 1" aria-current="true"></button>
+                                <button class="slider-dot" type="button" data-slider-dot aria-label="Go to screenshot 2"></button>
+                                <button class="slider-dot" type="button" data-slider-dot aria-label="Go to screenshot 3"></button>
+                            </div>
+                            <p class="slider-count"><span data-slider-current>1</span> / <span data-slider-total>3</span></p>
+                        </div>
+                    </div>
+
+                    <ul class="checklist project-highlights" data-reveal>
+                        <li>
+                            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <div>
+                                <strong>Product &amp; inventory management</strong>
+                                Add, edit, and organize products with categories, brands, and supplier records.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <div>
+                                <strong>Sales at a glance</strong>
+                                Dashboard charts summarize sales and performance trends in real time.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <div>
+                                <strong>Customer records</strong>
+                                Keep customer details and purchasing activity organized in one place.
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <div class="container">
+                <div class="cta-panel" data-reveal>
+                    <div>
+                        <h2>Have a system to build?</h2>
+                        <p>Let's turn a messy process into something clear, reliable, and easy to maintain.</p>
+                    </div>
+                    <a class="btn btn-white btn-lg" href="{{ path('Contact') }}">
+                        Start a conversation
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> RJ Portfolio. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="{{ path('Root') }}">Home</a></li>
+                <li><a href="{{ path('Work') }}">Work</a></li>
+                <li><a href="{{ path('AboutMe') }}">About Me</a></li>
+                <li><a href="{{ path('Contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="module" src="{{ asset('js/home.js') }}"></script>
+    <script type="module" src="{{ asset('js/work.js') }}"></script>
+</body>
+</html>

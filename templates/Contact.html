@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact RJ — let's talk about the system you're building, the problem you're solving, and how to make it last.">
+    <title>Contact · RJ Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%234f46e5%22/><text x=%2250%22 y=%2268%22 font-size=%2254%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22>R</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="{{ path('Root') }}">
+                <img class="brand-logo" src="{{ asset('picture/rj.jpg') }}" alt="" width="896" height="885">
+                RJ Portfolio
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="{{ path('Root') }}">Home</a></li>
+                    <li class="dropdown">
+                        <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+                            About Me
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ path('AboutMe') }}">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+                                    About Me
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path('AboutMe') }}#skills">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5.2L20 8l-4 4 1 5.8-5-2.8-5 2.8L8 12 4 8l5.6-.8z"/></svg>
+                                    Skills
+                                </a>
+                            </li>
+                            <li>
+                                <a class="active" href="{{ path('Contact') }}" aria-current="page">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ path('Work') }}">Work</a></li>
+                </ul>
+                <a class="btn btn-primary nav-cta" href="#get-in-touch">Let's talk</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero contact-hero">
+            <div class="container">
+                <div class="contact-intro" data-reveal>
+                    <span class="hero-greeting">Contact</span>
+                    <h1 class="hero-name">Let's talk about<br>what you're building.</h1>
+                    <p class="hero-lead">
+                        Whether you're starting a new system, cleaning up an existing one,
+                        or looking for a back-end developer who cares about the architecture,
+                        I'd like to hear about it.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#get-in-touch">
+                            Send a message
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a class="btn btn-ghost" href="{{ path('Work') }}">See my work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="help">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <span class="section-kicker">How I can help</span>
+                    <h2>From data model to deployment.</h2>
+                    <p>
+                        I focus on the back end and the delivery pipeline — the parts that
+                        decide whether a system is easy to maintain or expensive to touch.
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <article class="card" data-reveal>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Back-end development</h3>
+                        <p>REST APIs, authentication, integrations, and business logic built to be clear, testable, and easy to extend.</p>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Architecture &amp; data</h3>
+                        <p>Data models, database design, and service boundaries that keep a system understandable as it grows.</p>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                        </div>
+                        <h3>Delivery &amp; maintenance</h3>
+                        <p>Docker, CI/CD, and the practical work that keeps a product stable after launch.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="get-in-touch">
+            <div class="container">
+                <div class="contact-split">
+                    <div class="contact-copy" data-reveal>
+                        <span class="section-kicker">Get in touch</span>
+                        <h2>Tell me about the problem.</h2>
+                        <p>
+                            You don't need a finished specification. A short description of
+                            what you're trying to do is enough to start.
+                        </p>
+
+                        <ul class="checklist">
+                            <li>
+                                <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <div>
+                                    <strong>What it needs to do</strong>
+                                    The core workflow, who uses it, and the outcome you need.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <div>
+                                    <strong>What you're working with</strong>
+                                    Your current stack, constraints, and any existing code.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <div>
+                                    <strong>What “done” looks like</strong>
+                                    The timeline, the must-haves, and what success means to you.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <aside class="contact-card contact-form-card" data-reveal>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>
+                        </div>
+                        <h3>Send a message</h3>
+                        <p>Tell me a little about what you need. Your message goes straight to my inbox.</p>
+
+                        {% for message in app.flashes('contact_success') %}
+                            <div class="flash flash-success" role="status">{{ message }}</div>
+                        {% endfor %}
+                        {% for message in app.flashes('contact_error') %}
+                            <div class="flash flash-error" role="alert">{{ message }}</div>
+                        {% endfor %}
+
+                        {{ form_start(form, {attr: {class: 'contact-form', novalidate: 'novalidate'}}) }}
+                            {{ form_errors(form) }}
+
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    {{ form_label(form.name) }}
+                                    {{ form_widget(form.name) }}
+                                    {{ form_errors(form.name) }}
+                                </div>
+                                <div class="form-field">
+                                    {{ form_label(form.email) }}
+                                    {{ form_widget(form.email) }}
+                                    {{ form_errors(form.email) }}
+                                </div>
+                                <div class="form-field form-field-full">
+                                    {{ form_label(form.subject) }}
+                                    {{ form_widget(form.subject) }}
+                                    {{ form_errors(form.subject) }}
+                                </div>
+                                <div class="form-field form-field-full">
+                                    {{ form_label(form.message) }}
+                                    {{ form_widget(form.message) }}
+                                    {{ form_errors(form.message) }}
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-lg contact-submit" type="submit">
+                                Send message
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </button>
+                            <p class="contact-privacy">Your details are only used to reply to this message.</p>
+                        {{ form_end(form) }}
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> RJ Portfolio. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="{{ path('Root') }}">Home</a></li>
+                <li><a href="{{ path('Work') }}">Work</a></li>
+                <li><a href="{{ path('AboutMe') }}">About Me</a></li>
+                <li><a href="{{ path('Contact') }}" aria-current="page">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="module" src="{{ asset('js/home.js') }}"></script>
+</body>
+</html>
