@@ -9,7 +9,5 @@ config/secrets/prod/prod.decrypt.private.php
 var/
 vendor/
 node_modules/
-public/assets/
-public/bundles/
 assets/vendor/
 tests/
