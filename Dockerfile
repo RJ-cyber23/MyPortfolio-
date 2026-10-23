@@ -34,11 +34,10 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER=1 \
     COMPOSER_NO_INTERACTION=1
 
-# --- FIX: Change Apache DocumentRoot directly here instead of copying a custom config ---
-ENV APACHE_DOCUMENT_ROOT /var/www/html/public
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
-    && sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
-# --------------------------------------------------------------------------------------
+# Apache: point the default vhost at public/ and send unknown paths to the
+# Symfony front controller (the Debian default config has no FallbackResource,
+# so /about, /work, etc. would 404 even though / works).
+COPY docker/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www/html
 
