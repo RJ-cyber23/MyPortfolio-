@@ -1,0 +1,1 @@
+{"version":2,"defects":[],"times":{"App\\Tests\\Controller\\ContactControllerTest::testContactPageRendersForm":1.359,"App\\Tests\\Controller\\ContactControllerTest::testValidContactFormSendsEmailToConfiguredAddress":0.309,"App\\Tests\\Controller\\ContactControllerTest::testInvalidContactFormShowsErrorsAndDoesNotSend":0.136}}
